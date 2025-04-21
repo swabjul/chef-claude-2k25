@@ -38,6 +38,90 @@ header {
 }
 
 main {
-  width: 100%;
   padding: 70px 63px 66px;
+}
+
+.main__inner {
+  max-width: 595px;
+  margin: 0 auto;
+}
+
+.add-ingredient-form {
+  margin-bottom: 48px;
+}
+
+.add-ingredient-input {
+  max-width: 595px;
+  width: 100%;
+  height: 38px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.add-ingredient-input > input {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+  font-family: "Inter";
+  color: #6B7280;
+  font-size: calc(14rem / 16);
+  font-weight: 400;
+  padding: 9px 13px;
+  flex: 1;
+}
+
+.add-ingredient-input > input::placeholder {
+  color: #6B7280;
+}
+
+.add-ingredient-input > button {
+  min-width: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #141413;
+  color: #FAFAF8;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: calc(14rem / 16);
+  box-shadow: 0px 1px 2px 0px #0000000D;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  height: 38px;
+}
+
+.add-ingredient-input > button::before {
+  content: "+";
+}
+
+.add-ingredient-input > button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px){
+  .add-ingredient-input > input,
+  .add-ingredient-input > button {
+    width: 100%;
+  }
+}
+
+h2.add-ingredients-heading {
+  font-size: calc(30rem / 16);
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #141413;
+}
+
+.add-ingredient-list {
+  padding-left: 30px;
+  font-size: calc(18rem / 16);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #475467;
+  margin-bottom: 48px;
 }
