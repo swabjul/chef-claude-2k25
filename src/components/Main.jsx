@@ -3,8 +3,6 @@ import { useState } from "react";
 export default function Main() {
 
 
-
-
   const [ingredients, setIngredients] = useState(["Chicken", "Oregano", "Tomatoes"]);
 
   const ingredientListItems = ingredients.map((ingredient, index) => (
@@ -13,20 +11,9 @@ export default function Main() {
 
 
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget)
+  function addIngredients(formData) {
     const newIngredient = formData.get("ingredient")
-
     setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-
-    // console.log(ingredients)
-    clearInput()
-  }
-
-  function clearInput() {
-    const inputText = document.querySelector(".add-ingredient-input input")
-    inputText.value = ""
   }
 
 
@@ -34,7 +21,7 @@ export default function Main() {
   return (
     <main>
       <div className="main__inner">
-        <form className="add-ingredient-form" onSubmit={handleSubmit}>
+        <form className="add-ingredient-form" action={addIngredients}>
           <div className="add-ingredient-input">
             <input 
               type="text" 
