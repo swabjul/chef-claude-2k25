@@ -53,10 +53,8 @@ main {
 .add-ingredient-input {
   max-width: 595px;
   width: 100%;
-  height: 38px;
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .add-ingredient-input > input {
@@ -76,7 +74,7 @@ main {
 }
 
 .add-ingredient-input > button {
-  min-width: 185px;
+  width: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,14 +99,9 @@ main {
   opacity: 0.8;
 }
 
-@media (max-width: 768px){
-  .add-ingredient-input > input,
-  .add-ingredient-input > button {
-    width: 100%;
-  }
-}
 
-h2.add-ingredients-heading {
+
+h2 {
   font-size: calc(30rem / 16);
   font-weight: 600;
   margin-bottom: 24px;
@@ -124,4 +117,103 @@ h2.add-ingredients-heading {
   gap: 20px;
   color: #475467;
   margin-bottom: 48px;
+}
+
+
+.generate-recipe {
+  width: 100%;
+  background-color: #F0EFEB;
+  padding: 28px 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.generate-recipe__text h3 {
+  font-size: calc(18rem / 16);
+  font-weight: 400;
+  color:  #141413;
+  margin-bottom: 8px;
+}
+
+.generate-recipe__text p {
+  font-size: calc(14rem / 16);
+  font-weight: 400;
+  color: #6B7280;
+}
+
+.generate-recipe__button button {
+  width: 115px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #D17557;
+  font-size: calc(14rem / 16);
+  color: #FAFAF8;
+  border: none;
+  cursor: pointer;
+}
+
+.generate-recipe__button button:hover {
+  opacity: 0.8;
+}
+
+
+.suggested-recipe-container p {
+  font-size: calc(18rem / 16);
+  font-weight: 400;
+  color: #475467;
+  margin-bottom: 40px;
+}
+
+.suggested-recipe-container h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.suggested-recipe-container ul, .suggested-recipe-container ol {
+  padding-left: 30px;
+  font-size: calc(18rem / 16);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #475467;
+  margin-bottom: 48px;
+}
+
+.suggested-recipe-container h4 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+  .add-ingredient-input{
+    flex-direction: column;
+  }
+
+  .add-ingredient-input > button {
+    align-self: center;
+  }
+
+  .generate-recipe {
+    flex-direction: column;
+    gap: 20px
+  }
+
+  .generate-recipe {
+    align-self: flex-start;
+  }
+
+
+
 }
