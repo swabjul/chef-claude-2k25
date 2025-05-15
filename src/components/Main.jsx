@@ -6,9 +6,6 @@ export default function Main() {
 
   const [ingredients, setIngredients] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"]);
 
-  const ingredientListItems = ingredients.map((ingredient, index) => (
-    <li key={index}>{ingredient}</li>
-  ))
 
   const [recipeShown, setRecipeShown] = useState(false)
 
@@ -36,13 +33,13 @@ export default function Main() {
           </div>
         </form>
 
-        { ingredients.length > 0 && <IngredientsList 
-          list={ingredientListItems}
+        { ingredients.length > 0 && <IngredientsList
+          list={ingredients}
           toggle={toggleRecipeShown}
         /> }
 
-
         { recipeShown && <ClaudeRecipe />}
+
       </div>
 
 

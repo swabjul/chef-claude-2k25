@@ -1,14 +1,21 @@
 export default function IngredientsList(props) {
 
+  const ingredientListItems = props.list.map((ingredient, index) => (
+    <li key={index}>{ingredient}</li>
+  ))
+
+
+
+
   return (
     <section>
       <h2 className="add-ingredients-heading">Ingredients on hand:</h2>
       <ul className="add-ingredient-list">
-        {props.list}
+        {ingredientListItems}
       </ul>
 
       {
-        props.list.length > 3 &&
+        ingredientListItems.length > 3 &&
           <section className="generate-recipe">
             <div className="generate-recipe__text">
               <h3>Ready for a recipe?</h3>
